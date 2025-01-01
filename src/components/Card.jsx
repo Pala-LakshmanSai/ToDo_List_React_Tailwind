@@ -2,10 +2,10 @@ import React from "react";
 import Tag from "./Tag";
 import { MdDeleteForever } from "react-icons/md";
 
-const Card = ({ tags }) => {
+const Card = ({ title, tags }) => {
   return (
     <div className="w-full border-2 rounded-lg p-3 my-4">
-      <div>Change Delete Icon</div>
+      <p className="font-semibold font-sans">Change Delete Icon</p>
       <div className="flex justify-between items-center pt-4 pr-5">
         <div className="flex">
           {tags.map((tag, index) => (
@@ -13,7 +13,7 @@ const Card = ({ tags }) => {
           ))}
         </div>
         <div>
-          <MdDeleteForever />
+          <MdDeleteForever className="w-6 h-6 opacity-30 transition-all duration-600 ease-in-out cursor-pointer hover:opacity-100"/>
         </div>
       </div>
     </div>

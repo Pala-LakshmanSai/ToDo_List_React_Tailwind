@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card"
+import Card from "./Card";
 
 const TaskColumn = ({ title, icon }) => {
   return (
@@ -9,8 +9,8 @@ const TaskColumn = ({ title, icon }) => {
         <div>{title}</div>
       </h2>
       <div>
-        <Card tags={["HTML", "CSS"]}/>
-        <Card tags={["HTML", "CSS"]}/>
+        <Card tags={["HTML", "CSS"]} />
+        <Card tags={["HTML", "CSS"]} />
       </div>
     </section>
   );

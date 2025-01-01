@@ -6,6 +6,28 @@ import { GrInProgress } from "react-icons/gr";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
 const App = () => {
+  const tasks = [
+    {
+      title: "Delete Icon",
+      tags: ["HTML"],
+      type: "Done"
+    },
+    {
+      title: "go to gym",
+      tags: ["HTML", "CSS"],
+      type: "In progress"
+    },
+    {
+      title: "drink water",
+      tags: ["HTML", "CSS", "JavaScript"],
+      type: "To do"
+    },
+  ];
+
+  const toDOTasks = tasks.filter(task => task.type == "To do");
+  const InProgressTasks = tasks.filter(task => task.type == "In progress");
+  const DoneTasks = tasks.filter(task => task.type == "Done");
+  
   return (
     <div className="grid grid-rows-custom">
       <TaskForm />
