@@ -1,16 +1,17 @@
 import React from "react";
 import Card from "./Card";
 
-const TaskColumn = ({ title, icon }) => {
+const TaskColumn = ({ tasks, columnTitle, icon }) => {
   return (
-    <section className="mt-9 w-3/12">
+    <section className="mt-9 w-taskColumnWidth">
       <h2 className="flex items-center text-2xl font-bold">
         <div className="mr-3">{icon}</div>
-        <div>{title}</div>
+        <div>{columnTitle}</div>
       </h2>
-      <div>
-        <Card tags={["HTML", "CSS"]} />
-        <Card tags={["HTML", "CSS"]} />
+      <div className="w-11/12">
+        {
+        tasks.map((task, index) => <Card key={index} title={task.title} tags={task.tags}/>)
+        }
       </div>
     </section>
   );

@@ -22,6 +22,11 @@ const App = () => {
       tags: ["HTML", "CSS", "JavaScript"],
       type: "To do"
     },
+    {
+      title: "new",
+      tags: ["HTML", "CSS", "JavaScript", "HTML", "CSS", "JavaScript"],
+      type: "Done"
+    },
   ];
 
   const toDOTasks = tasks.filter(task => task.type == "To do");
@@ -31,10 +36,10 @@ const App = () => {
   return (
     <div className="grid grid-rows-custom">
       <TaskForm />
-      <main className="flex justify-evenly">
-        <TaskColumn icon={<TbTargetArrow />} title="To do" />
-        <TaskColumn icon={<GrInProgress />} title="In progress" />
-        <TaskColumn icon={<IoCheckmarkDoneCircleSharp />} title="Done" />
+      <main className="flex justify-evenly mx-14">
+        <TaskColumn tasks={toDOTasks} icon={<TbTargetArrow />} columnTitle="To do" />
+        <TaskColumn  tasks={InProgressTasks} icon={<GrInProgress />} columnTitle="In progress" />
+        <TaskColumn tasks={DoneTasks} icon={<IoCheckmarkDoneCircleSharp />} columnTitle="Done" />
       </main>
     </div>
   );

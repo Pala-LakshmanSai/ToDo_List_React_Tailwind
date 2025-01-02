@@ -9,6 +9,9 @@ export default {
         gridTemplateRows: {
         'custom': '160px auto',
       },
+      width: {
+        'taskColumnWidth':'30%'
+      }
     },
   },
   plugins: [],
