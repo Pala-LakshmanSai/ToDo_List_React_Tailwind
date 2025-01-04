@@ -7,7 +7,7 @@ import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
 useEffect(() => {
   const oldTasks = localStorage.getItem("tasks") || localStorage.setItem("tasks", JSON.stringify([]));
-})
+},[])
 const App = () => {
   const [tasks, setTasks] = useState(JSON.parse(oldTasks));
 
