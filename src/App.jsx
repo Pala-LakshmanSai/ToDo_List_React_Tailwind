@@ -5,7 +5,9 @@ import { TbTargetArrow } from "react-icons/tb";
 import { GrInProgress } from "react-icons/gr";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
-const oldTasks = localStorage.getItem("tasks") || localStorage.setItem("tasks", JSON.stringify([]));
+useEffect(() => {
+  const oldTasks = localStorage.getItem("tasks") || localStorage.setItem("tasks", JSON.stringify([]));
+})
 const App = () => {
   const [tasks, setTasks] = useState(JSON.parse(oldTasks));
 
